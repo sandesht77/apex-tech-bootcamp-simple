@@ -102,3 +102,22 @@ document.querySelectorAll('.feature-card, .detail-card, .benefit').forEach(card 
 window.addEventListener('load', () => {
     document.body.style.opacity = '1';
 });
+
+// Contact Form Handler
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const message = document.getElementById('message').value;
+        
+        // Show success message
+        alert('Thank you for your message! We will get back to you soon.');
+        
+        // Reset form
+        contactForm.reset();
+    });
+}
